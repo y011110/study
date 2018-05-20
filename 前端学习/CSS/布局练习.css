@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	padding: 0;
+	margin: 0;
+}
+header{
+	height: 60px;
+	width: 100%;
+	background: #4B4848;
+	color: #FCF9F9;
+	text-align: center;
+	vertical-align: middle;
+}
+.header_main{
+	display: inline-block;
+	width: 960px;
+	background: #4B4848;
+	margin-top: 10px;
+	overflow: hidden;
+}
+#logo{
+	font-size: 25px;
+	font-weight: 600;
+	width: 100px;
+	float: left;
+}
+.head_nav{
+	width: 250px;
+	float: right;
+}
+a{
+	color: aliceblue;
+}
+.banner{
+	height: 180px;
+	background: #94D795;
+	margin-top: -16px;
+}
+ul{
+	display: inline-block;
+	width: 25%;
+	height: 70px;
+	overflow: hidden;
+	position: absolute;
+	left: 73%;
+	top: 110px;
+}
+li{
+	list-style-type: none;
+	float: left;
+}
+.banner a{
+	display: block;
+	width: 30px;
+	height: 40px;
+	margin-right: 10px;
+    margin-top: 20px;
+	text-align: center;
+	line-height: 250%;
+	border: 1px solid #1D1C1C;
+	transition: height 0.1s;
+	background: #CBF5C7;
+	text-decoration:none;
+	color: black;
+}
+.banner a:hover {
+	     margin-top: 10px;
+         padding-top: 10px;
+	     border: 1px solid #1D1C1C;
+	     background:#DDEBDC;
+         }
+
+.navgation{
+	height: 100px;
+	border-bottom: 1px solid #9C9696;
+	text-align: center;
+}
+.nav-main{
+	display: inline-block;
+	width: 960px;
+	overflow: auto;
+	margin-top: 65px;
+}
+#nav1,#nav2,#nav3{
+	display: inline-block;
+	width: 85px;
+	height: 35px;
+	font-size: 20px;
+	border: 1px solid #9C9696;
+	background:#D5D5D5;
+	line-height: 180%;
+	 border-top-left-radius:1em;
+	border-top-right-radius: 1em;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+#nav1:hover,#nav2:hover,#nav3:hover{
+	background: white;
+	border-bottom: 0px;
+}
+
+.main{
+	text-align: center;
+}
+.hang1,.hang2,.hang3{
+	width: 960px;
+	display: inline-flex;
+	flex-direction: row;
+	align-content: space-between;
+}
+.content{
+	font-size: 15px;
+	padding: 80px;
+	margin: 5px;
+	border: 1px solid #9C9696;
+	flex:1 1 auto;
+}
+footer{
+	height: 70px;
+	text-align: center;
+	background: #4B4848;
+	color: #FCF9F9;
+	padding-top: 10px;
+	margin-top: 5px;
+}

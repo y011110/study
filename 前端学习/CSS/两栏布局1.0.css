@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+/* 左侧30% 右侧70%*/
+.warpper{
+	width: 1000px;
+	height: 100px;
+    border: 1px dashed #ff6c60;
+	overflow: hidden;
+	background-color:#F5CFDD;
+}
+.left{
+	float: left;
+	width: 30%;
+	background-color: bisque;
+	padding: 0;
+	margin: 0;
+	
+}
+.right{
+	float:right;
+	width: 70%;
+	background: #96E2EF;
+	padding: 0;
+	margin: 0;
+}
