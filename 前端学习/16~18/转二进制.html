@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+    <button id="trans-btn" onclick="dec2bin(6)">转化为二进制</button>
+    <p id="result">运算结果</p>
+    <p id="messge"></p>
+    <script>
+
+    function dec2bin(decNumber) {
+        // 在这里实现你的转化方法，注意需要判断输入必须为一个非负整数
+		var inputNumber = document.getElementById("dec-number").value;
+		var x = document.getElementById("messge");
+		x.innerHTML = "";
+		try{
+			if(inputNumber == "") throw "值为空";
+			if(inputNumber<0) throw "不能为负";
+			if(!typeof inputNumber === 'number' || inputNumber%1 != 0) throw"请输入整数";
+		}
+		catch(err){
+			return x.innerHTML = "错误: " + err;
+		}
+		var y = new Array();
+		var jieguo = new Array();
+		var i = 0;
+		do{
+			y[i] = inputNumber%2;
+			inputNumber = (inputNumber - inputNumber%2)/2;
+			i++;
+		}while(inputNumber != 0);
+		if(i<decNumber){
+			for(var k = 0;k<decNumber-i;k++)
+		    {
+			    jieguo[k] = 0;
+		    }
+			for(k;k<decNumber;k++)
+		    {
+			    jieguo[k] = y[i-1];
+				i--;
+		    }
+			document.getElementById("result").innerHTML = "运算结果: " + jieguo;
+		}
+		else{
+			for(k = 0;k<i;k++)
+		    {
+			    jieguo[k] = y[i-k-1];
+		    }
+			document.getElementById("result").innerHTML = "运算结果: " + jieguo;
+			console.log("数字过大，超过decNumber")
+		}
+    }
+
+// 实现党点击转化按钮时，将输入的十进制数字转化为二进制，并显示在result的p标签内
+// Some coding
+
+    </script>
+</body>
+</html>

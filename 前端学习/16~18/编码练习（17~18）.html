@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="编码练习式样.css">
+<title></title>
+</head>
+<body>
+    <h1>编码练习（17~18）</h1>
+    <div class="main-one">
+    	<p>3的小游戏</p>
+        <button id="threeGame" onClick="numberThreeGame(100)">开始</button>
+        <p id="result1"></p>
+    </div>
+    <div class="main-two">
+    	<p>九九乘法表</p>
+        <button id="jiujiu" onClick="jiujiuGame()">开始</button>
+        <table>
+        	<tr>
+        		<td id="ta11"></td><td id="ta12"></td><td id="ta13"></td>
+        		<td id="ta14"></td><td id="ta15"></td><td id="ta16"></td>
+        		<td id="ta17"></td><td id="ta18"></td><td id="ta19"></td>
+        	</tr>
+        	<tr>
+        		<td id="ta21"></td><td id="ta22"></td><td id="ta23"></td>
+        		<td id="ta24"></td><td id="ta25"></td><td id="ta26"></td>
+        		<td id="ta27"></td><td id="ta28"></td><td id="ta29"></td>
+        	</tr>
+        	<tr>
+        		<td id="ta31"></td><td id="ta32"></td><td id="ta33"></td>
+        		<td id="ta34"></td><td id="ta35"></td><td id="ta36"></td>
+        		<td id="ta37"></td><td id="ta38"></td><td id="ta39"></td>
+        	</tr>
+        	<tr>
+        		<td id="ta41"></td><td id="ta42"></td><td id="ta43"></td>
+        		<td id="ta44"></td><td id="ta45"></td><td id="ta46"></td>
+        		<td id="ta47"></td><td id="ta48"></td><td id="ta49"></td>
+        	</tr>
+        	<tr>
+        		<td id="ta51"></td><td id="ta52"></td><td id="ta53"></td>
+        		<td id="ta54"></td><td id="ta55"></td><td id="ta56"></td>
+        		<td id="ta57"></td><td id="ta58"></td><td id="ta59"></td>
+        	</tr>
+        	<tr>
+        		<td id="ta61"></td><td id="ta62"></td><td id="ta63"></td>
+        		<td id="ta64"></td><td id="ta65"></td><td id="ta66"></td>
+        		<td id="ta67"></td><td id="ta68"></td><td id="ta69"></td>
+        	</tr>
+        	<tr>
+        		<td id="ta71"></td><td id="ta72"></td><td id="ta73"></td>
+        		<td id="ta74"></td><td id="ta75"></td><td id="ta76"></td>
+        		<td id="ta77"></td><td id="ta78"></td><td id="ta79"></td>
+        	</tr>
+        	<tr>
+        		<td id="ta81"></td><td id="ta82"></td><td id="ta83"></td>
+        		<td id="ta84"></td><td id="ta85"></td><td id="ta86"></td>
+        		<td id="ta87"></td><td id="ta88"></td><td id="ta89"></td>
+        	</tr>
+        	<tr>
+        		<td id="ta91"></td><td id="ta92"></td><td id="ta93"></td>
+        		<td id="ta94"></td><td id="ta95"></td><td id="ta96"></td>
+        		<td id="ta97"></td><td id="ta98"></td><td id="ta99"></td>
+        	</tr>
+        </table>
+    </div>
+    <script>
+		function numberThreeGame(yourNumber){
+			var x = new Array();
+			var k = 0;
+			for(var i = 1;i <= yourNumber;i++){
+				if(i%3 === 0 || /3/.test(i)){
+					x[k] = 'PA';
+					console.log(x[k]);
+					k++;
+				}
+				else{
+					x[k] = i;
+					console.log(x[k]);
+					k++;
+				}
+			}
+			
+			document.getElementById("result1").innerHTML = x;
+		}
+		
+		function jiujiuGame(){
+			var jieguo = 0;
+			var taName = "ta11";
+			for(var i = 1;i<10;i++){
+				for(var j = 1;j<10;j++){
+					jieguo = i * j;
+					console.log(i + "*" + j + "=" + jieguo);
+					taName = "ta" + i +j;
+					document.getElementById(taName).innerHTML = "   " + i + "*" + j + "=" + jieguo;
+				}
+			}
+		}
+	</script>
+</body>
+</html>
